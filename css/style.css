@@ -447,6 +447,19 @@ img {
     width: 35rem;
 }
 
+@media(min-width:768px) {
+    .product-container img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media(min-width: 576px) {
+    .product-container img {
+        width: 100%;
+    }
+}
+
 .product-description {
     padding: 3rem 0rem;
     margin: 0 3rem;
