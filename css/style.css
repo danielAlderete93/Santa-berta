@@ -94,12 +94,6 @@ img {
     line-height: 1.4rem
 }
 
-@media (max-width: 576px) {
-    .navbar {
-        display: none!important;
-    }
-}
-
 .section-container .us h5,
 .section-container span,
 .section-container .us p {
@@ -598,4 +592,30 @@ textarea {
 textarea,
 input {
     font-weight: bold;
+}
+
+form {
+    width: 50%!important;
+}
+
+#contact-tel {
+    width: 50%!important;
+}
+
+@media (max-width: 576px) {
+    .navbar {
+        display: none!important;
+    }
+    .form-control,
+    #contact-tel {
+        width: 100%!important;
+    }
+    form {
+        width: 100%!important;
+        margin: 0!important;
+    }
+    .section-container {
+        min-width: 100%;
+        margin: 3.5rem 0 0 0;
+    }
 }
