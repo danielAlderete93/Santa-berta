@@ -6,7 +6,6 @@ html {
 h1,
 h2,
 h3,
-h4,
 h5,
 h6,
 a,
@@ -16,6 +15,30 @@ a,
     font-family: 'Akaya Telivigala', cursive;
     */
     color: rgb(220, 214, 214);
+}
+
+h4,
+p,
+textarea,
+input,
+button,
+label,
+.btn-success,
+.btn-main,
+.btn-warning {
+    /*font-family: 'Oswald', sans-serif;*/
+    font-family: 'Akaya Kanadaka', cursive;
+    font-size: 1.2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.text-product p span {
     text-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15);
 }
 
@@ -37,19 +60,6 @@ h2 em {
 }
 
 p,
-textarea,
-input,
-button,
-label,
-.btn-success,
-.btn-main,
-.btn-warning {
-    /*font-family: 'Oswald', sans-serif;*/
-    font-family: 'Akaya Kanadaka', cursive;
-    font-size: 1.2rem;
-}
-
-p,
 button,
 label,
 .btn-success,
@@ -66,11 +76,15 @@ h2 {
 }
 
 h3 {
+    font-size: 2.4rem;
+}
+
+h4 {
     font-size: 2rem;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 
@@ -103,10 +117,15 @@ img {
     font-weight: bold;
 }
 
+
+/*
 .section-container span {
     font-weight: bold;
 }
+*/
 
+
+/*
 .section-title.products h5,
 .section-title.products span {
     color: #bab28f;
@@ -115,6 +134,7 @@ img {
 .section-title.products h3 {
     color: #bab28f;
 }
+*/
 
 
 /* The hero image */
@@ -166,6 +186,10 @@ img {
 
 .bg-section {
     background-color: #ffffff;
+}
+
+.bg-coffee {
+    background-color: #1c0e06;
 }
 
 .btn-product {
@@ -250,41 +274,6 @@ img {
     }
 }
 
-
-/*
-.navbar ul,
-.navbar-index ul {
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-}
-*/
-
-
-/*
-.navbar li,
-.navbar-index li {
-    display: block;
-    border-right: 2px solid #0d0b12;
-    flex: calc(100/6);
-    min-height: 100%;
-}
-
-.navbar li:last-child {
-    border-right: none;
-}
-*/
-
-
-/*
-.navbar {
-    min-width: 100%;
-    height: 10vh;
-    right: 0%;
-    z-index: 2;
-}
-*/
-
 .navbar-index {
     position: absolute;
     top: 80vh;
@@ -351,23 +340,6 @@ img {
     border: 2px solid #bab28f;
 }
 
-.border-main.product {
-    border-radius: 1rem;
-    padding: 1rem;
-    background: #19182852;
-    border: 2px solid #bab28f;
-    font-weight: bold;
-}
-
-.border-main p {
-    color: #bab28f;
-    margin: 0;
-}
-
-.border-main span {
-    color: #bab28f;
-}
-
 .btn-social em,
 .btn-social p {
     color: #bab28f;
@@ -397,31 +369,42 @@ img {
     transition: all .3s ease-out;
 }
 
+
+/** Section **/
+
+.section {
+    min-height: 100vh;
+    margin: 5rem 0;
+}
+
+.section-title-container {
+    margin: 4rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title {
+    text-align: left;
+}
+
+.section-title span {
+    font-weight: bold;
+}
+
+.section-primary .section-title {
+    color: #bab28f;
+}
+
+.section-primary .line-3 {
+    background-color: #bab28f;
+}
+
 .line-3 {
     padding: 1.5px;
     width: 100px;
     background: #0d0b12;
-}
-
-.line-3.products {
-    background-color: #bab28f;
-}
-
-.section-container {
-    min-height: 100vh;
-}
-
-.section-container:first-of-type,
-.section-title:first-of-type {
-    margin-top: 3rem;
-}
-
-.section-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 0;
 }
 
 .color-primary {
@@ -429,95 +412,107 @@ img {
 }
 
 
-/* Container product*/
+/** products-section **/
 
-.container-product {
-    position: relative;
-    max-width: 100%;
-}
-
-.container-product:hover .overlay {
-    opacity: .9;
-}
-
-.image-overlay {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: #0d0b12;
-}
-
-.product-container {
-    max-width: 100%;
-    margin-bottom: 3rem;
-}
-
-.product-container img {
-    width: 35rem;
-}
-
-@media(min-width:768px) {
-    .product-container img {
-        width: 100%;
-        max-width: 400px;
-    }
-}
-
-@media(min-width: 576px) {
-    .product-container img {
-        width: 100%;
-    }
-}
-
-.product-description {
-    padding: 3rem 0rem;
-    margin: 0 3rem;
-    font-family: 'Akaya Kanadaka', cursive;
-}
-
-.product-description h4 {
-    font-size: 1.9rem;
+.product-title,
+.product-subtitle {
     font-weight: bold;
+}
+
+.product-title {
     color: #ffffff;
 }
 
-.product-description h5 {
-    font-size: 1.4rem;
-    font-family: 'Akaya Kanadaka', cursive;
-    color: #cccccc;
+.product-subtitle {
+    color: #dcd6d6;
 }
 
-.product-description p {
-    color: #cccccc;
+.product-text {
+    color: #dcd6d6;
 }
 
-.border-info-product {
-    border: 2px solid #cccccc;
+.product-body {
+    width: 100%;
 }
 
-.border-info-product p {
-    margin: 0;
+.product-info {
+    border-radius: 1rem;
     padding: 1rem;
+    background: #19182891;
+    border: 2px solid #bab28f;
     font-weight: bold;
-    color: #cccccc;
 }
 
-.box-shadow {
-    box-shadow: 6px 10px 30px -1px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 6px 10px 30px -1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 6px 10px 30px -1px rgba(0, 0, 0, 0.75);
+.product-info .product-text {
+    margin: 0;
+    color: #bab28f;
+    text-shadow: 0 1px 0 rgb(0, 0, 0);
+}
+
+.product-image {
+    flex-basis: 50%;
+    padding: 4%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.bg-blue .product-image {
+    background-color: rgb(28 36 54);
+    background-image: url("../img/celeste.jpg");
+}
+
+.bg-crimson .product-image {
+    background-color: rgb(57 33 39);
+    background-image: url("../img/scotch.png");
+}
+
+.bg-blonde .product-image {
+    background-color: rgb(89 61 25);
+    background-image: url("../img/productov2.jpg");
+}
+
+.bg-coffee .product-image {
+    background-color: #1c0e06;
+    background-image: url("../img/productov2.jpg");
+}
+
+.product-description {
+    flex-basis: 50%;
+}
+
+@media(min-width:768px) {
+    .product-info {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 576px) {
+    .product-image {
+        flex-basis: 100%;
+        padding: 0;
+        background-color: black;
+        display: block;
+    }
+    .product-description {
+        flex-basis: 100%;
+        padding: 1rem;
+    }
+    .product-description .product-title,
+    .product-description .product-subtitle {
+        text-align: center;
+    }
+    .product-description .product-subtitle {
+        margin: 0 0 1rem 0;
+    }
+    .btn-product {
+        width: 100%;
+    }
 }
 
 
