@@ -3,6 +3,10 @@ html {
     color: rgb(220, 214, 214);
 }
 
+@font-face {
+    font-display: fallback;
+}
+
 h1,
 h2,
 h3,
@@ -84,9 +88,33 @@ h4 {
 }
 
 img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+/*
+figure {
+    display: block;
     width: 100%;
     height: auto;
+    position: relative;
+    overflow: hidden;
+    padding: 34.37% 0 0 0;
 }
+
+figure img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+*/
 
 
 /* The hero image */
@@ -95,7 +123,8 @@ img {
     /*background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url("https://www.transparenttextures.com/patterns/broken-noise.png");*/
     height: 100vh;
     background-color: #1c1c1c;
-    background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+    /*background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");*/
+    background-image: url("../img/brick-wall-dark.png");
     background-attachment: fixed;
     /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
     /*
@@ -160,9 +189,9 @@ img {
 .hero-image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero.jpg");
     min-height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     position: relative;
     opacity: 0.95;
 }
@@ -180,9 +209,9 @@ img {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/Sirviendo_test.jpg");
     min-height: 100vh;
     width: 100%;
-    background-position: 0% 60%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     filter: grayscale(0.35);
     z-index: 1;
 }
@@ -617,6 +646,13 @@ img {
     background-blend-mode: darken;
     background-position: center;
     background-size: cover;
+}
+
+@media(max-width:768px) {
+    #contacto {
+        box-shadow: initial;
+        background: transparent;
+    }
 }
 
 #footer p {
