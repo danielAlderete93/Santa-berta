@@ -3,10 +3,6 @@ html {
     color: rgb(220, 214, 214);
 }
 
-@font-face {
-    font-display: fallback;
-}
-
 h1,
 h2,
 h3,
@@ -579,6 +575,28 @@ figure img {
 
 #tabs .tab-pane {
     min-height: 18rem;
+}
+
+#tabs .card {
+    flex: 30%;
+}
+
+#tabs .card {
+    background: transparent;
+    border: 1px solid #873449;
+}
+
+#tabs .card-header {
+    border-color: #873449;
+}
+
+#tabs .card-title h4 {
+    color: #bab28f;
+    font-weight: bold;
+}
+
+#tabs .card-text p {
+    color: #ccc;
 }
 
 .vertical-line-crimson {
