@@ -17,3 +17,12 @@
         @content;
     }
 }
+
+@mixin hero{
+    filter: grayscale(0.35);
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%
+}

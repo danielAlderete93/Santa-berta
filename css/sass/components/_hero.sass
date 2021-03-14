@@ -1,0 +1,43 @@
+$hero-main: "../../img/hero.jpg"
+$hero-product: "../../img/Sirviendo_test.jpg"
+.hero-image
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($hero-main)
+    @include hero
+    position: relative
+    opacity: 0.95
+
+.hero-product
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($hero-product)
+    @include hero
+    z-index: 1
+
+.hero-text
+    text-align: center
+    position: absolute
+    top: 35vh
+    left: 50vw
+    transform: translate(-50%, -50%)
+    color: $color-white
+
+.hero-product-text
+    text-align: center
+    margin: auto
+    color: $color-white
+    padding: 1rem
+
+.skirt-product
+    display: inline-block
+    text-align: center
+    align-items: center
+
+.skirt
+    -webkit-text-stroke: 1px #ffffff
+    color: transparent
+.skrew
+    transform: skew(10deg, 10deg)
+.skrew-invert
+    transform: skew(-10deg, -10deg)
+.skrew-top
+    transform: skew(10deg, -10deg)
+.skrew-top-invert
+    transform: skew(-10deg, 10deg)

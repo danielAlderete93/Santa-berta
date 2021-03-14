@@ -1,8 +1,47 @@
+/*Fonts*/
+
+
+/*Breakpoints*/
+
+
+/**/
+
+
+/*Color*/
+
+
+/*Background*/
+
+
+/*Borders color*/
+
+
+/*Breakpoints*/
+
+
+/*
+@import 'utilities/bootstrap';
+@import 'vendors/jquery-ui';
+*/
+
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 
 /* Document
    ========================================================================== */
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
 
 
 /**
@@ -61,6 +100,7 @@ h1 {
  */
 
 hr {
+    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     /* 1 */
     height: 0;
@@ -106,6 +146,7 @@ abbr[title] {
     /* 1 */
     text-decoration: underline;
     /* 2 */
+    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
     /* 2 */
 }
@@ -283,6 +324,7 @@ fieldset {
  */
 
 legend {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* 1 */
     color: inherit;
@@ -323,6 +365,7 @@ textarea {
 
 [type="checkbox"],
 [type="radio"] {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     /* 1 */
     padding: 0;
@@ -417,3 +460,336 @@ template {
 [hidden] {
     display: none;
 }
+
+h1,
+h2,
+h3,
+h5,
+h6,
+a,
+.text-product p span {
+    font-family: "Special Elite", cursive;
+}
+
+h4,
+p,
+textarea,
+input,
+button,
+label,
+.btn {
+    font-family: "Akaya Kanadaka", cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.text-product p span {
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+
+/*Mobile first*/
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 1.9rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+a {
+    font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.4rem;
+    }
+    h3 {
+        font-size: 1.9rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    }
+}
+
+.navbar-index {
+    position: absolute;
+    top: 80vh;
+    min-width: 100%;
+    height: 20vh;
+}
+
+.navbar-index2 {
+    position: absolute;
+    top: 70vh;
+    min-width: 100%;
+    height: 20vh;
+}
+
+.navbar-nav {
+    padding: 1.5rem 0rem;
+}
+
+@media only screen and (min-width: 992px) {
+    .navbar-nav {
+        padding: 0;
+    }
+}
+
+#nav-main.bg-dark {
+    background: #212529;
+}
+
+@media only screen and (min-width: 992px) {
+    #nav-main.bg-dark {
+        background: rgba(33, 37, 41, 0.95) !important;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #nav-main.bg-dark {
+        background: rgba(33, 37, 41, 0.95) !important;
+    }
+}
+
+
+/*
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/forms';
+*/
+
+
+/*Navegacion principal*/
+
+@media only screen and (min-width: 992px) {
+    #nav-main {
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #nav-main {
+        padding: 0;
+    }
+}
+
+#nav-main .nav-link {
+    font-weight: 900;
+    padding: 1rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+}
+
+@media only screen and (min-width: 768px) {
+    #nav-main .nav-link {
+        width: 95%;
+        margin: 0 auto;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    #nav-main .nav-link {
+        display: block;
+        text-align: center;
+    }
+    #nav-main .nav-link:hover {
+        background-color: #212529;
+        -webkit-transition: all 1s ease-in;
+        transition: all 1s ease-in;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #nav-main .nav-link {
+        display: block;
+        text-align: center;
+    }
+    #nav-main .nav-link:hover {
+        background-color: #212529;
+        -webkit-transition: all 1s ease-in;
+        transition: all 1s ease-in;
+    }
+}
+
+.nav-item {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-item {
+        border: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .nav-item {
+        border: none;
+    }
+}
+
+.nav-item:nth-child(1) {
+    border-top: 2px solid rgba(255, 255, 255, 0.55);
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-item:nth-child(1) {
+        border: none;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .nav-item:nth-child(1) {
+        border: none;
+    }
+}
+
+.nav-item.social {
+    padding: 1rem 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-bottom: none;
+    font-size: 1.25rem;
+}
+
+.social .navbar-link {
+    color: #fff;
+    -webkit-transition: 1s all ease;
+    transition: 1s all ease;
+}
+
+.social .navbar-link:hover {
+    color: #cccccc;
+    -webkit-transition: 1s all ease;
+    transition: 1s all ease;
+}
+
+.brand {
+    display: block;
+    text-align: right;
+}
+
+@media only screen and (min-width: 768px) {
+    .brand {
+        text-align: center;
+    }
+}
+
+.navbar-brand {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 1rem;
+    border: 2px white solid;
+    border-radius: 100%;
+}
+
+
+/*Botones secciones*/
+
+
+/*
+@import 'components/jumbo';
+@import 'pages/home';
+@import 'pages/contact';
+@import 'themes/theme';
+@import 'themes/admin';
+*/
+
+
+/*# sourceMappingURL=style.css.map */
