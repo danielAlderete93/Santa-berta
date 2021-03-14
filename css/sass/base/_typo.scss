@@ -1,0 +1,129 @@
+h1,
+h2,
+h3,
+h5,
+h6,
+a,
+.text-product p span {
+    font-family: "Special Elite", cursive;
+}
+
+h4,
+p,
+textarea,
+input,
+button,
+label,
+.btn {
+    font-family: "Akaya Kanadaka", cursive;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+.text-product p span {
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+
+/*Mobile first*/
+
+h1 {
+    font-size: $font-size-h1;
+}
+
+h2 {
+    font-size: $font-size-h2;
+}
+
+h3 {
+    font-size: $font-size-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+}
+
+h5 {
+    font-size: $font-size-h5;
+}
+
+a {
+    font-size: $font-size-p;
+}
+
+@media (min-width: $breakpoint-sm) {
+    h1 {
+        font-size: $font-size-h1;
+    }
+    h2 {
+        font-size: $font-size-h2;
+    }
+    h3 {
+        font-size: $font-size-h3;
+    }
+    h4 {
+        font-size: $font-size-h4;
+    }
+    h5 {
+        font-size: $font-size-h5;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    h1 {
+        font-size: $font-size-h1;
+    }
+    h2 {
+        font-size: $font-size-h2;
+    }
+    h3 {
+        font-size: $font-size-h3;
+    }
+    h4 {
+        font-size: $font-size-h4;
+    }
+    h5 {
+        font-size: $font-size-h5;
+    }
+}
+
+@media (min-width: $breakpoint-lg) {
+    h1 {
+        font-size: $font-size-h1;
+    }
+    h2 {
+        font-size: $font-size-h2;
+    }
+    h3 {
+        font-size: $font-size-h3;
+    }
+    h4 {
+        font-size: $font-size-h4;
+    }
+    h5 {
+        font-size: $font-size-h5;
+    }
+}
+
+@media (min-width: $breakpoint-xl) {
+    h1 {
+        font-size: $font-size-h1;
+    }
+    h2 {
+        font-size: $font-size-h2;
+    }
+    h3 {
+        font-size: $font-size-h3;
+    }
+    h4 {
+        font-size: $font-size-h4;
+    }
+    h5 {
+        font-size: $font-size-h5;
+    }
+}

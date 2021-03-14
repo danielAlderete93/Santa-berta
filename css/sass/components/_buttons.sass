@@ -1,0 +1,77 @@
+$padding-nav-link: 1rem 1.5rem
+$font-weight-nav: 900
+$border-nav: rgba(255, 255, 255, .55)
+
+/*Navegacion principal*/
+#nav-main
+    @include desktop
+        padding: 0
+    @include large
+        padding: 0
+    .nav-link
+        font-weight: $font-weight-nav
+        padding: $padding-nav-link
+        display: flex
+        justify-content: space-between
+        flex-direction: row-reverse
+        align-items: baseline
+        @include tablet
+            width: 95%
+            margin: 0 auto
+            justify-content: space-around
+
+        @include desktop
+            display: block
+            text-align: center
+            &:hover
+                background-color: $bg-dark
+                transition: all 1s ease-in
+        @include large
+            display: block
+            text-align: center
+            &:hover
+                background-color: $bg-dark
+                transition: all 1s ease-in
+
+.nav-item
+    border-bottom: 2px solid $border-nav
+
+    @include desktop
+        border: none
+    @include large
+        border: none
+
+.nav-item
+    &:nth-child(1)
+        border-top: 2px solid $border-nav
+        @include desktop
+            border: none
+        @include large
+            border: none
+    &.social
+        padding: $padding-nav-link
+        display: flex
+        justify-content: space-around
+        border-bottom: none
+        font-size: $font-size-h5
+
+.social .navbar-link
+    color: #fff
+    transition: 1s all ease
+    &:hover
+        color: opacify(#ccc,0.8)
+        transition: 1s all ease
+
+.brand
+    display: block
+    text-align: right
+    @include tablet
+        text-align: center
+
+.navbar-brand
+    display: inline-block
+    font-size: $font-size-h6
+    padding: 1rem
+    border: 2px white solid
+    border-radius: 100%
+/*Botones secciones*/

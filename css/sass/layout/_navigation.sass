@@ -1,0 +1,24 @@
+$padding-navbar: 1.5rem 0rem
+
+.navbar-index
+    position: absolute
+    top: 80vh
+    min-width: 100%
+    height: 20vh
+    &2
+        position: absolute
+        top: 70vh
+        min-width: 100%
+        height: 20vh
+
+.navbar-nav
+    padding: $padding-navbar
+    @include desktop
+        padding: 0
+
+#nav-main.bg-dark
+    background: $bg-dark
+    @include desktop
+        background: transparentize($bg-dark, 0.05)!important
+    @include large
+        background: transparentize($bg-dark, 0.05)!important
