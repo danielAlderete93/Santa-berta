@@ -1,19 +1,24 @@
 /*Breakpoints*/
+@mixin mobile-xl {
+    @media only screen and (min-width: $breakpoint-sm) {
+        @content;
+    }
+}
 
 @mixin tablet {
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: $breakpoint-md) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media only screen and (min-width: 992px) {
+    @media only screen and (min-width: $breakpoint-lg) {
         @content;
     }
 }
 
 @mixin large {
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: $breakpoint-xl) {
         @content;
     }
 }
@@ -25,4 +30,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%
+}
+
+@mixin self-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

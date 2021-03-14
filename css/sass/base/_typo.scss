@@ -46,10 +46,21 @@ h2 {
     font-size: $font-size-h2;
 }
 
+
 h3 {
     font-size: $font-size-h3;
 }
-
+    
+h1.skirt{
+    font-size:  $font-size-h3!important;
+    @include tablet{ 
+        font-size: $font-size-h1!important;
+        }
+    @include desktop
+        {font-size: $font-size-h1!important;}
+    @include large
+        {font-size: $font-size-h1!important;}
+}
 h4 {
     font-size: $font-size-h4;
 }
@@ -62,74 +73,6 @@ a {
     font-size: $font-size-p;
 }
 
-@media (min-width: $breakpoint-sm) {
-    h1 {
-        font-size: $font-size-h1;
-    }
-    h2 {
-        font-size: $font-size-h2;
-    }
-    h3 {
-        font-size: $font-size-h3;
-    }
-    h4 {
-        font-size: $font-size-h4;
-    }
-    h5 {
-        font-size: $font-size-h5;
-    }
-}
-
-@media (min-width: $breakpoint-md) {
-    h1 {
-        font-size: $font-size-h1;
-    }
-    h2 {
-        font-size: $font-size-h2;
-    }
-    h3 {
-        font-size: $font-size-h3;
-    }
-    h4 {
-        font-size: $font-size-h4;
-    }
-    h5 {
-        font-size: $font-size-h5;
-    }
-}
-
-@media (min-width: $breakpoint-lg) {
-    h1 {
-        font-size: $font-size-h1;
-    }
-    h2 {
-        font-size: $font-size-h2;
-    }
-    h3 {
-        font-size: $font-size-h3;
-    }
-    h4 {
-        font-size: $font-size-h4;
-    }
-    h5 {
-        font-size: $font-size-h5;
-    }
-}
-
-@media (min-width: $breakpoint-xl) {
-    h1 {
-        font-size: $font-size-h1;
-    }
-    h2 {
-        font-size: $font-size-h2;
-    }
-    h3 {
-        font-size: $font-size-h3;
-    }
-    h4 {
-        font-size: $font-size-h4;
-    }
-    h5 {
-        font-size: $font-size-h5;
-    }
+.title span {
+    font-weight: 900
 }
