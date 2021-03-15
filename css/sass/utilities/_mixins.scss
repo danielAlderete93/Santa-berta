@@ -1,4 +1,5 @@
 /*Breakpoints*/
+
 @mixin mobile-xl {
     @media only screen and (min-width: $breakpoint-sm) {
         @content;
@@ -23,7 +24,25 @@
     }
 }
 
-@mixin hero{
+
+/*Layout*/
+
+@mixin self-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin skirt($stroke-color, $color) {
+    -webkit-text-stroke: 1px $stroke-color;
+    color: $color!important;
+}
+
+
+/*Components*/
+
+@mixin hero {
     filter: grayscale(0.35);
     min-height: 100vh;
     background-position: center;
@@ -32,9 +51,79 @@
     width: 100%
 }
 
-@mixin self-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+/*Sombreado*/
+
+@mixin define-product($bg-color-name) {
+    $transparent: 0.9;
+    $bg: map-get($bg-products, $bg-color-name);
+    //todo:Deprecated
+    //$bg-url:map-get($bg-image-products, $bg-color-name);
+    $font-size: 2.8rem;
+    @include tablet {
+        $font-size: 2.5rem;
+    }
+    @if $bg-color-name="bg-blue" {
+        $transparent: 0.55
+    }
+    ;
+    .#{$bg-color-name} {
+        background-color: transparentize($bg, $transparent);
+    }
+    .#{$bg-color-name} .product-image {
+        flex-basis: 100%;
+        padding: 0;
+        background-color: black;
+        display: block;
+        @include tablet {
+            //flex-basis: 50%;
+            padding: 4%;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        background-color: #3b3b3b;
+        background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+    }
+    @include tablet {
+        .product-image img {
+            border-radius: 1.5%;
+        }
+    }
+    .#{$bg-color-name} .product-description .title {
+        @if $bg-color-name !="bg-coffee" {
+            @include skirt($bg,
+            darken($bg, 15%))
+        }
+        @else {
+            @include skirt(complement($color-primary),
+            lighten($bg, 7.5%))
+        }
+        @include text-shadow;
+        letter-spacing: 3px;
+        font-size: $font-size;
+    }
+    .#{$bg-color-name} .product-description .subtitle {
+        @if $bg-color-name !="bg-coffee" {
+            @include skirt($bg,
+            lighten($bg, 7.5%))
+        }
+        @else {
+            @include skirt(complement($color-primary),
+            darken($bg, 15%))
+        }
+        font-size: $font-size * .7;
+    }
+}
+
+@mixin text-shadow {
+    text-shadow: 5px 5px 2px #000;
+}
+
+@mixin text-shadow-dark {
+    text-shadow: 5px 5px 3px #fff;
 }

@@ -14,15 +14,16 @@ textarea,
 input,
 button,
 label,
+.subtitle,
+.product-info .text,
 .btn {
     font-family: "Akaya Kanadaka", cursive;
 }
 
-q{
-   font-family: "Akaya Kanadaka", cursive;
-   letter-spacing: 1.9px
-    }
-
+q {
+    font-family: "Akaya Kanadaka", cursive;
+    letter-spacing: 1.9px
+}
 
 h1,
 h2,
@@ -46,21 +47,23 @@ h2 {
     font-size: $font-size-h2;
 }
 
-
 h3 {
     font-size: $font-size-h3;
 }
-    
-h1.skirt{
-    font-size:  $font-size-h3!important;
-    @include tablet{ 
+
+h1.skirt {
+    font-size: $font-size-h3!important;
+    @include tablet {
         font-size: $font-size-h1!important;
-        }
-    @include desktop
-        {font-size: $font-size-h1!important;}
-    @include large
-        {font-size: $font-size-h1!important;}
+    }
+    @include desktop {
+        font-size: $font-size-h1!important;
+    }
+    @include large {
+        font-size: $font-size-h1!important;
+    }
 }
+
 h4 {
     font-size: $font-size-h4;
 }
@@ -73,6 +76,16 @@ a {
     font-size: $font-size-p;
 }
 
-.title span {
+.title span,
+.subtitle {
     font-weight: 900
+}
+
+.product-info .text {
+    font-weight: 700;
+}
+
+.text {
+    line-height: 175%;
+    letter-spacing: 150%;
 }

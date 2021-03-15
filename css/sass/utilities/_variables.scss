@@ -16,14 +16,25 @@ $breakpoint-lg: 992px;
 $breakpoint-xl: 1200px;
 
 /*Background*/
+
 $bg-main: #1c1c1c;
 
 /*Color*/
+
 $color-white: #fff;
+$color-grey:#dcd6d6;
 $color-primary: #bab28f;
+$color-secondary: #0d0b12;
 
 /*Background*/
 
+$bg-white: #fff;
 $bg-dark:#212529;
+$bg-products-info:#191828;
+$bg-products:("bg-blue":#41a4d2, "bg-crimson":#993128, "bg-blonde":#995528, "bg-coffee":#1c0e06);
+//TODO:Deprecated
+$bg-image-products:( "bg-blue":"../img/celeste.jpg", "bg-crimson":"../img/scotch.png", "bg-blonde":"../img/productov2.jpg", "bg-coffee":"../img/black.jpg");
 
 /*Borders color*/
+
+$border-product: inset 3px #bab28f;

@@ -1,0 +1,45 @@
+@include define-product("bg-blue")
+@include define-product("bg-crimson")
+@include define-product("bg-blonde")
+@include define-product("bg-coffee")
+.product-description
+    flex-basis: 100%
+    padding: 1rem
+    .title,.subtitle
+        font-weight: 900
+        text-align: center
+        margin: 0 0 1rem 0
+        @include desktop
+            text-align: left
+    .title
+        //@include skirt($color-white,transparent)
+        color: $color-white!important
+    //.subtitle,
+    .text
+        color: $color-grey!important
+
+.product-description .subtitle:before
+    content: '-'
+    @include tablet
+        content: ''
+.product-description .subtitle:after
+    content: '-'
+    @include tablet
+        content: ''
+
+.product-info
+    border-radius: 1rem
+    padding: 1rem
+    background: transparentize($bg-products-info, 0.57)
+    border: $border-product
+    @include tablet
+        width: 75%
+        margin: auto
+    .text
+        margin: 0
+        color: $color-primary!important
+        
+
+
+
+      

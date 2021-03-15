@@ -5,6 +5,9 @@
 /*Background*/
 /*Borders color*/
 /*Breakpoints*/
+/*Layout*/
+/*Components*/
+/*Sombreado*/
 /*
 @import 'utilities/bootstrap';
 @import 'vendors/jquery-ui';
@@ -364,6 +367,11 @@ template {
   display: none;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
@@ -380,6 +388,8 @@ textarea,
 input,
 button,
 label,
+.subtitle,
+.product-info .text,
 .btn {
   font-family: "Akaya Kanadaka", cursive;
 }
@@ -447,8 +457,18 @@ a {
   font-size: 1rem;
 }
 
-.title span {
+.title span,
+.subtitle {
   font-weight: 900;
+}
+
+.product-info .text {
+  font-weight: 700;
+}
+
+.text {
+  line-height: 175%;
+  letter-spacing: 150%;
 }
 
 .navbar-index {
@@ -521,6 +541,25 @@ a {
           align-items: center;
   margin: 2.5rem auto;
   padding: 2.5rem 0;
+}
+
+#nosotros .image {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #nosotros .image {
+    display: block;
+    margin: auto;
+  }
+}
+
+#nosotros.section {
+  background-color: #fff;
+}
+
+#brewmaster.section {
+  background-color: #fff;
 }
 
 /*
@@ -668,6 +707,37 @@ a {
 }
 
 /*Botones secciones*/
+.btn-product {
+  padding: .8rem 3rem;
+  border-radius: 3rem;
+  border: 2px solid #258d5d;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  width: 100%;
+  color: #dcd6d6;
+}
+
+@media only screen and (min-width: 576px) {
+  .btn-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: auto;
+    margin: auto;
+  }
+}
+
 .hero-image {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../../img/hero.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/hero.jpg");
@@ -721,8 +791,8 @@ a {
 }
 
 .skirt {
-  -webkit-text-stroke: 1px #ffffff;
-  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent !important;
 }
 
 .skrew {
@@ -745,8 +815,307 @@ a {
           transform: skew(-10deg, 10deg);
 }
 
-#productos .title {
+#productos.section .title {
   color: #bab28f;
+}
+
+#productos .line-3 {
+  background-color: #bab28f;
+}
+
+.line-3 {
+  padding: 1.5px;
+  width: 100px;
+  background: #0d0b12;
+}
+
+.bg-blue {
+  background-color: rgba(65, 164, 210, 0.45);
+}
+
+.bg-blue .product-image {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 0;
+  background-color: black;
+  display: block;
+  background-color: #3b3b3b;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-blue .product-image {
+    padding: 4%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .product-image img {
+    border-radius: 1.5%;
+  }
+}
+
+.bg-blue .product-description .title {
+  -webkit-text-stroke: 1px #41a4d2;
+  color: #267aa0 !important;
+  text-shadow: 5px 5px 2px #000;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+}
+
+.bg-blue .product-description .subtitle {
+  -webkit-text-stroke: 1px #41a4d2;
+  color: #60b3d9 !important;
+  font-size: 1.75rem;
+}
+
+.bg-crimson {
+  background-color: rgba(153, 49, 40, 0.45);
+}
+
+.bg-crimson .product-image {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 0;
+  background-color: black;
+  display: block;
+  background-color: #3b3b3b;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-crimson .product-image {
+    padding: 4%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .product-image img {
+    border-radius: 1.5%;
+  }
+}
+
+.bg-crimson .product-description .title {
+  -webkit-text-stroke: 1px #993128;
+  color: #5c1e18 !important;
+  text-shadow: 5px 5px 2px #000;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+}
+
+.bg-crimson .product-description .subtitle {
+  -webkit-text-stroke: 1px #993128;
+  color: #b73b30 !important;
+  font-size: 1.75rem;
+}
+
+.bg-blonde {
+  background-color: rgba(153, 85, 40, 0.45);
+}
+
+.bg-blonde .product-image {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 0;
+  background-color: black;
+  display: block;
+  background-color: #3b3b3b;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-blonde .product-image {
+    padding: 4%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .product-image img {
+    border-radius: 1.5%;
+  }
+}
+
+.bg-blonde .product-description .title {
+  -webkit-text-stroke: 1px #995528;
+  color: #5c3318 !important;
+  text-shadow: 5px 5px 2px #000;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+}
+
+.bg-blonde .product-description .subtitle {
+  -webkit-text-stroke: 1px #995528;
+  color: #b76630 !important;
+  font-size: 1.75rem;
+}
+
+.bg-coffee {
+  background-color: rgba(28, 14, 6, 0.45);
+}
+
+.bg-coffee .product-image {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 0;
+  background-color: black;
+  display: block;
+  background-color: #3b3b3b;
+  background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+}
+
+@media only screen and (min-width: 768px) {
+  .bg-coffee .product-image {
+    padding: 4%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .product-image img {
+    border-radius: 1.5%;
+  }
+}
+
+.bg-coffee .product-description .title {
+  -webkit-text-stroke: 1px #8f97ba;
+  color: #3c1e0d !important;
+  text-shadow: 5px 5px 2px #000;
+  letter-spacing: 3px;
+  font-size: 2.5rem;
+}
+
+.bg-coffee .product-description .subtitle {
+  -webkit-text-stroke: 1px #8f97ba;
+  color: black !important;
+  font-size: 1.75rem;
+}
+
+.product-description {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 1rem;
+}
+
+.product-description .title, .product-description .subtitle {
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .product-description .title, .product-description .subtitle {
+    text-align: left;
+  }
+}
+
+.product-description .title {
+  color: #fff !important;
+}
+
+.product-description .text {
+  color: #dcd6d6 !important;
+}
+
+.product-description .subtitle:before {
+  content: '-';
+}
+
+@media only screen and (min-width: 768px) {
+  .product-description .subtitle:before {
+    content: '';
+  }
+}
+
+.product-description .subtitle:after {
+  content: '-';
+}
+
+@media only screen and (min-width: 768px) {
+  .product-description .subtitle:after {
+    content: '';
+  }
+}
+
+.product-info {
+  border-radius: 1rem;
+  padding: 1rem;
+  background: rgba(25, 24, 40, 0.43);
+  border: inset 3px #bab28f;
+}
+
+@media only screen and (min-width: 768px) {
+  .product-info {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+.product-info .text {
+  margin: 0;
+  color: #bab28f !important;
+}
+
+.embebed-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.embebed-responsive iframe, .embebed-responsive object, .embebed-responsive embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*
