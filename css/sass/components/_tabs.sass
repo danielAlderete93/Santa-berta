@@ -1,0 +1,70 @@
+/*Variable*/
+$color-item: #873449
+$color-inactive: #41404f
+$bg-tabs: #191828
+
+/*Mixin*/
+@mixin border-pills($color)
+    border-bottom: 2px solid $color
+
+/*Magic*/
+#tabs-nav
+    background-color: $bg-tabs
+
+#tabs .tab-pane
+    min-height: 60vh
+
+#tabs-nav .nav-item::before
+    float: right
+    display: block
+    padding: 7px
+    color: $color-item
+    content: ">"
+    font-weight: bolder
+
+#tabs-nav .nav-pills .nav-link
+    color: $color-grey
+    background-color: transparent
+    border-radius: 0%
+    @include border-pills($color-inactive)
+
+#tabs-nav .nav-pills .nav-link.active
+    @include border-pills($color-item)
+
+#pills-ingredents-tab
+    border-left: 2px solid $color-item
+    padding-left: 1rem
+    margin: 0 1rem
+    
+#tabs-nav .nav-item:last-child::before,
+#tabs-nav .nav-item:nth-last-child(2)::before
+    display: none
+
+
+
+.vertical-line-crimson
+    display: none
+    @include tablet
+        display: block
+        margin: 0 2.5rem
+        height: 30vh
+        border-right: 2px solid $color-item
+
+.craft-text
+    flex-grow: 1
+    flex-shrink: 1
+    .subtitle,.title
+        font-weight: bold
+    .subtitle
+        color: $color-primary
+    .title
+        color: $color-grey
+        font-weight: bold
+    p
+        color: $color-white
+    &>:nth-child(1)
+        flex: 1 1 0px
+        margin: auto
+
+    &>:last-child
+        flex: 3 1 0px
