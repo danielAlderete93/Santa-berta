@@ -1,15 +1,50 @@
-/*Botones secciones*/
-.btn-product
+%btn
     padding: .8rem 3rem
     border-radius: 3rem
-    border: 2px solid #258d5d
     font-weight: bold
     font-size: 1.3rem
     letter-spacing: 1px
+
+/*Botones secciones*/
+.btn-product
+    @extend %btn
+    border: 2px solid #258d5d
     width: 100%
     color: $color-grey
     @include mobile-xl
         @include self-center
         width: auto
         margin: auto
-        
+
+.btn-submit
+    @extend %btn
+    background-color: #ffc10720
+    border: 2px solid #ffc107
+
+.btn-social em,
+.btn-social p
+    color: #bab28f
+    background: #191828bd
+    border: 2px solid #bab28f
+    font-size: 1.875rem
+    padding: 0.3125rem
+    width: 3.75rem
+    height: 3.75rem
+    text-align: center
+    line-height: 2.8125rem
+    border-radius: 50%
+    -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.3)
+    box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.3)
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3)
+    transition: all .3s ease-in
+
+.btn-social em:hover,
+
+    &:hover
+        background: rgb(123, 117, 94)
+        color: #bab28f
+        border: 2px solid #bab28f
+        -webkit-box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.3)
+        box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.3)
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3)
+        transition: all .3s ease-out

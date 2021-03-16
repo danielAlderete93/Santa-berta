@@ -1,8 +1,11 @@
-$bg-image: "https://www.transparenttextures.com/patterns/brick-wall-dark.png"
+//$bg-image: "https://www.transparenttextures.com/patterns/brick-wall-dark.png"
+//$bg-image: "../../img/woods.png"
+$bg-image: "https://www.transparenttextures.com/patterns/cardboard.png"
+$bg-color: $color-primary
 .bg-main
     /*background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url(https://www.transparenttextures.com/patterns/broken-noise.png);*/
     min-height: 100vh
-    background-color: $bg-main
+    background-color: darken($bg-color,40%)
     background-image: url($bg-image)
     background-attachment: fixed
 
@@ -14,7 +17,3 @@ $bg-image: "https://www.transparenttextures.com/patterns/brick-wall-dark.png"
         @include self-center
         margin: 2.5rem auto
         padding: 2.5rem 0
-
-
-
-

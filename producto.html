@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=5.0" />
     <meta name="description" content="Santa Berta, cervezas artesanales.">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Special+Elite&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preload" as="style" href="./css/style.css">
     <link rel="stylesheet" href="./css/style.css" />
     <title>Santa Berta</title>
 </head>
@@ -297,7 +298,7 @@
         <!--todo: Acordion Responsive-->
         <div id="tabs-nav" class="bg-craft container-fluid  pt-5 shadow">
             <div class="container-fluid">
-                <ul class="nav nav-pills mb-3 justify-content-between" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills mb-3 justify-content-lg-between" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
                         <button class="nav-link active" id="pills-step-1-tab" data-bs-toggle="pill" data-bs-target="#pills-step-1" type="button" role="tab" aria-controls="pills-step-1" aria-selected="true">Malteado</button>
                     </li>
@@ -329,123 +330,82 @@
 
                 <div id="tabs" class="tab-content " id="pills-tabContent">
                     <!--Malteado-->
-                    <div class="tab-pane p-md-5 fade show active" id="pills-step-1" role="tabpanel" aria-labelledby="pills-step-1-tab">
-                        <div class="d-flex flex-md-row flex-column justify-content-evenly craft-text">
-                            <div class="text-center">
-                                <h4 class="title">Malteado</h4>
-                            </div>
-                            <div class="vertical-line-crimson shadow"></div>
-                            <div class="craft-text">
-                                <h5 class="subtitle">¿Que hacemos?</h5>
-                                <p>Durante el malteado los granos de cereal, normalmente de cebada, atraviesan un proceso de germinación controlada con el fin de activar las enzimas presentes en el grano, que luego serán necesarias durante la maceración.
-                                </p>
-                                <h5 class="subtitle">¿Que efecto se logra?</h5>
-                                <p>Dependiendo del grado de tostado obtenido durante el malteo, conseguiremos maltas más claras u oscuras, que aportarán el color de la cerveza.</p>
-                            </div>
+                    <div class="tab-pane px-md-5 py-md-1 fade show active" id="pills-step-1" role="tabpanel" aria-labelledby="pills-step-1-tab">
+                        <div class="craft-text">
+                            <h3 class="subtitle">¿Que hacemos?</h3>
+                            <p>Durante el malteado los granos de cereal, normalmente de cebada, atraviesan un proceso de germinación controlada con el fin de activar las enzimas presentes en el grano, que luego serán necesarias durante la maceración.
+                            </p>
+                            <h3 class="subtitle">¿Que efecto se logra?</h3>
+                            <p>Dependiendo del grado de tostado obtenido durante el malteo, conseguiremos maltas más claras u oscuras, que aportarán el color de la cerveza.</p>
                         </div>
                     </div>
                     <!--Maceracion-->
-                    <div class="tab-pane p-md-5 fade" id="pills-step-2" role="tabpanel" aria-labelledby="pills-step-2-tab">
-                        <div class="d-flex flex-md-row flex-column justify-content-evenly craft-text">
-                            <div class="text-center">
-                                <h4 class="title">Maceración</h4>
-                            </div>
-                            <div class="vertical-line-crimson shadow"></div>
-                            <div class="craft-text">
-                                <h5 class="subtitle">¿Que hacemos?</h5>
-                                <p>Una vez hemos molido el grano de cereal, es hora de mezclarlo con agua para preparar el <strong>mosto cervecero</strong>. El agua es el ingrediente mayoritario representando entre el 85%-90% del contenido de la cerveza
-                                    final.
-                                </p>
-                                <h5 class="subtitle">¿Que efecto se logra?</h5>
-                                <p>la malta se mezcla con el agua a diferentes tiempos y temperaturas, produciendo las transformaciones necesarias para convertir el almidón en azúcares fermentables.</p>
-                            </div>
+                    <div class="tab-pane px-md-5 py-md-1 fade" id="pills-step-2" role="tabpanel" aria-labelledby="pills-step-2-tab">
+                        <div class="craft-text">
+                            <h3 class="subtitle">¿Que hacemos?</h3>
+                            <p>Una vez hemos molido el grano de cereal, es hora de mezclarlo con agua para preparar el <strong>mosto cervecero</strong>. El agua es el ingrediente mayoritario representando entre el 85%-90% del contenido de la cerveza final.
+                            </p>
+                            <h3 class="subtitle">¿Que efecto se logra?</h3>
+                            <p>la malta se mezcla con el agua a diferentes tiempos y temperaturas, produciendo las transformaciones necesarias para convertir el almidón en azúcares fermentables.</p>
                         </div>
                     </div>
+
                     <!--Filtración-->
-                    <div class="tab-pane p-md-5 fade" id="pills-step-3" role="tabpanel" aria-labelledby="pills-step-3-tab">
-                        <div class="d-flex flex-md-row flex-column justify-content-evenly craft-text">
-                            <div class="text-center">
-                                <h4 class="title">Filtración</h4>
-                            </div>
-                            <div class="vertical-line-crimson shadow"></div>
-                            <div class="craft-text">
-                                <h5 class="subtitle">¿Que hacemos?</h5>
-                                <p>Filtramos el mosto a través de una cuba filtro o de un filtro prensa, en ambos casos se separa el líquido del sólido, a este último le llamamos bagazo y normalmente es reaprovechado para alimentación animal.</p>
-                                <h5 class="subtitle">¿Que efecto se logra?</h5>
-                                <p>Tras la maceración, se separa el mosto líquido de los restos de malta.</p>
-                            </div>
+                    <div class="tab-pane px-md-5 py-md-1 fade" id="pills-step-3" role="tabpanel" aria-labelledby="pills-step-3-tab">
+                        <div class="craft-text">
+                            <h3 class="subtitle">¿Que hacemos?</h3>
+                            <p>Filtramos el mosto a través de una cuba filtro o de un filtro prensa, en ambos casos se separa el líquido del sólido, a este último le llamamos bagazo y normalmente es reaprovechado para alimentación animal.</p>
+                            <h3 class="subtitle">¿Que efecto se logra?</h3>
+                            <p>Tras la maceración, se separa el mosto líquido de los restos de malta.</p>
                         </div>
                     </div>
                     <!--Cocción-->
-                    <div class="tab-pane p-md-5 fade" id="pills-step-4" role="tabpanel" aria-labelledby="pills-step-4-tab">
-                        <div class="d-flex flex-md-row flex-column justify-content-evenly craft-text">
-                            <div class="text-center">
-                                <h4 class="title">Cocción</h4>
-                            </div>
-                            <div class="vertical-line-crimson shadow"></div>
-                            <div class="craft-text">
-                                <h5 class="subtitle">¿Que hacemos?</h5>
-                                <p>Durante esta etapa se esteriliza el mosto, se coagulan proteínas y se evaporan aromas indeseables. Normalmente este proceso dura en torno a una hora o más, dependiendo del estilo de cerveza que se esté elaborando. Posteriormente
-                                    el mosto final es sometido a una especie de centrifugado o whirpool.</p>
-                                <h5 class="subtitle">¿Que efecto se logra?</h5>
-                                <p>El mosto se lleva a ebullición con el objetivo de aportar amargor y aroma presentes en el lúpulo</p>
-                            </div>
+                    <div class="tab-pane px-md-5 py-md-1 fade" id="pills-step-4" role="tabpanel" aria-labelledby="pills-step-4-tab">
+                        <div class="craft-text">
+                            <h3 class="subtitle">¿Que hacemos?</h3>
+                            <p>Durante esta etapa se esteriliza el mosto, se coagulan proteínas y se evaporan aromas indeseables. Normalmente este proceso dura en torno a una hora o más, dependiendo del estilo de cerveza que se esté elaborando. Posteriormente
+                                el mosto final es sometido a una especie de centrifugado o whirpool.</p>
+                            <h3 class="subtitle">¿Que efecto se logra?</h3>
+                            <p>El mosto se lleva a ebullición con el objetivo de aportar amargor y aroma presentes en el lúpulo</p>
                         </div>
                     </div>
+
                     <!--Fermentacion-->
-                    <div class="tab-pane p-md-5 fade" id="pills-step-5" role="tabpanel" aria-labelledby="pills-step-5-tab">
-                        <div class="d-flex flex-md-row flex-column justify-content-evenly craft-text">
-                            <div class="text-center">
-                                <h4 class="title">Fermentación</h4>
-                            </div>
-                            <div class="vertical-line-crimson shadow"></div>
-                            <div class="craft-text">
-                                <h5 class="subtitle">¿Que hacemos?</h5>
-                                <p>Finalmente llegó el momento de enfriar y airear el mosto para luego sembrar la levadura. Usualmente en el proceso cervecero se utilizan dos grandes familias de levaduras: lager y ale. Este proceso se desarrolla en tanques
-                                    de fermentación que en ocasiones son conocidos como fermentadores.</p>
-                                <h5 class="subtitle">¿Que efecto se logra?</h5>
-                                <p>Durante la fermentación se transforman los azúcares fermentables en alcohol y CO2, al tiempo que se generan una gran variedad de compuestos, muchos de los cuales contribuyen a darle los aromas característicos tan populares
-                                    de la cerveza.</p>
-                            </div>
+                    <div class="tab-pane px-md-5 py-md-1 fade" id="pills-step-5" role="tabpanel" aria-labelledby="pills-step-5-tab">
+                        <div class="craft-text">
+                            <h3 class="subtitle">¿Que hacemos?</h3>
+                            <p>Finalmente llegó el momento de enfriar y airear el mosto para luego sembrar la levadura. Usualmente en el proceso cervecero se utilizan dos grandes familias de levaduras: lager y ale. Este proceso se desarrolla en tanques de
+                                fermentación que en ocasiones son conocidos como fermentadores.</p>
+                            <h3 class="subtitle">¿Que efecto se logra?</h3>
+                            <p>Durante la fermentación se transforman los azúcares fermentables en alcohol y CO2, al tiempo que se generan una gran variedad de compuestos, muchos de los cuales contribuyen a darle los aromas característicos tan populares
+                                de la cerveza.
+                            </p>
                         </div>
                     </div>
                     <!-- Maduración-->
-                    <div class="tab-pane p-md-5 fade" id="pills-step-6" role="tabpanel" aria-labelledby="pills-step-6-tab">
-                        <div class="d-flex flex-md-row flex-column justify-content-evenly craft-text">
-                            <div class="text-center">
-                                <h4 class="title">Maduración</h4>
-                            </div>
-                            <div class="vertical-line-crimson shadow"></div>
-                            <div class="craft-text">
-                                <h5 class="subtitle">¿Que hacemos?</h5>
-                                <p>El líquido resultante requiere de un período de maduración, donde la cerveza es sometida a bajas temperaturas.
-
-                                </p>
-                                <h5 class="subtitle">¿Que efecto se logra?</h5>
-                                <p>El sabor y los aromas logrados durante el proceso se estabilicen y se consiga el justo balance entre los diferentes matices.</p>
-                            </div>
+                    <div class="tab-pane px-md-5 py-md-1 fade" id="pills-step-6" role="tabpanel" aria-labelledby="pills-step-6-tab">
+                        <div class="craft-text">
+                            <h3 class="subtitle">¿Que hacemos?</h3>
+                            <p>El líquido resultante requiere de un período de maduración, donde la cerveza es sometida a bajas temperaturas.</p>
+                            <h3 class="subtitle">¿Que efecto se logra?</h3>
+                            <p>El sabor y los aromas logrados durante el proceso se estabilicen y se consiga el justo balance entre los diferentes matices.</p>
                         </div>
+
                     </div>
                     <!-- Envasado-->
-                    <div class="tab-pane p-md-5 fade" id="pills-step-7" role="tabpanel" aria-labelledby="pills-step-7-tab">
-                        <div class="d-flex flex-md-row flex-column justify-content-evenly craft-text">
-                            <div class="text-center">
-                                <h4 class="title">Envasado</h4>
-                            </div>
-                            <div class="vertical-line-crimson shadow"></div>
-                            <div class="craft-text">
-                                <h5 class="subtitle">¿Que hacemos?</h5>
-                                <p>Generalmente al terminar la maduración la cerveza es sometida a un proceso de filtración para separar pequeñas partículas de levadura y compuestos que aún se encuentran en suspensión. Una vez filtrada se obtiene la cerveza
-                                    brillante, la cual se envasa en diferentes formatos para su consumo y en muchos casos se pasteuriza para luego poner a disposición de los Cervecistas.
-                                </p>
-                                <h5 class="subtitle">¿Que efecto se logra?</h5>
-                                <p> Los Cervecistas sólo tendrán que abrir, servir y disfrutar.</p>
-                            </div>
+                    <div class="tab-pane px-md-5 py-md-1 fade" id="pills-step-7" role="tabpanel" aria-labelledby="pills-step-7-tab">
+                        <div class="craft-text">
+                            <h3 class="subtitle">¿Que hacemos?</h3>
+                            <p>Generalmente al terminar la maduración la cerveza es sometida a un proceso de filtración para separar pequeñas partículas de levadura y compuestos que aún se encuentran en suspensión. Una vez filtrada se obtiene la cerveza
+                                brillante, la cual se envasa en diferentes formatos para su consumo y en muchos casos se pasteuriza para luego poner a disposición de los Cervecistas.
+                            </p>
+                            <h3 class="subtitle">¿Que efecto se logra?</h3>
+                            <p> Los Cervecistas sólo tendrán que abrir, servir y disfrutar.</p>
                         </div>
                     </div>
                     <!-- Ingredientes-->
-                    <div class="tab-pane p-md-5 fade" id="pills-ingredents" role="tabpanel" aria-labelledby="pills-ingredents-tab">
-                        <div class="d-flex flex-md-row flex-column flex-wrap align-content-end">
+                    <div class="tab-pane px-md-5 py-md-1 fade" id="pills-ingredents" role="tabpanel" aria-labelledby="pills-ingredents-tab">
+                        <div class="d-flex flex-md-row flex-column flex-wrap align-content-end justify-content-sm-between">
                             <div class="card m-3">
                                 <div class="card-header">
                                     <div class="card-title text-center">
@@ -556,70 +516,73 @@
 
 
 
-    <footer id="contacto" class="section section-primary" tabindex="0">
+    <section id="contacto" class="section section-primary" tabindex="0">
         <div class="title-container">
             <div>
                 <h2 class="title">Contac<span>tanos</span></h2>
                 <div class="line-3 shadow"></div>
             </div>
         </div>
-
-        <form action="" class="container m-auto">
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre <span>*</span></label>
-                <input type="text" class="form-control" id="nombre" required placeholder="Nombre...">
-            </div>
-            <div class="mb-3">
-                <label for="subject" class="form-label">Asunto <span>*</span></label>
-                <input type="text" class="form-control" id="subject" required placeholder="Asunto...">
-            </div>
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Telefono <span>*</span></label>
-                <input type="tel" class="form-control" id="telefono" required placeholder="Telefono...">
-            </div>
-            <div class="mb-3">
-                <label for="mail" class="form-label">Email <span>*</span></label>
-                <input type="tel" class="form-control" id="mail" required placeholder="nombre@correo.com">
-            </div>
-            <div class="mb-3">
-                <label for="textarea" class="form-label">Mensaje <span>*</span></label>
-                <textarea class="form-control" id="textarea" required placeholder="Quiero consultar por..."></textarea>
-            </div>
-
-            <div class="mb-3 d-flex justify-content-center align-items-lg-center">
-                <button type="submit" class="btn btn-outline-warning btn-submit shadow ">Enviar</button>
-            </div>
-        </form>
-        <div class="mt-5">
-            <div id="contact-tel" class="container m-auto text-center border-main mb-3">
-                <p class="text"><span>santabertacontacto@gmail.com.ar</span> | Tel: 999-9999-9999</p>
-            </div>
-            <div class="container w-25 mx-auto mb-5">
-                <ul class="d-flex justify-content-around p-0">
-                    <li><a href="#" class="btn btn-social"><em class="fab fa-instagram"></em></a></li>
-                    <li><a href="#" class="btn btn-social"><em class="fab fa-facebook-f"></em></a></li>
-                    <li><a href="#" class="btn btn-social"><em class="fab fa-twitter"></em></a></li>
-                </ul>
-            </div>
-
-        </div>
-        <div id="footer" class="bg-dark mt3">
-            <div class="container pt-3 pb-2">
-                <div class="d-flex justify-content-between ">
-                    <div class="w-25">
-                        <p>Beber con moderación.</p>
-                        <p> Prohibida su venta a menores de 18 años.</p>
+        <div class="bg-contact  py-md-5">
+            <div class="contact-container container">
+                <form action="" class="container m-auto">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre <span>*</span></label>
+                        <input type="text" class="form-control" id="nombre" required placeholder="Nombre...">
                     </div>
-                    <div class="w-75">
-                        <p class="text-end">Al navegar en este sitio te comprometés a no compartir el contenido con menores de 18 años.</p>
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Asunto <span>*</span></label>
+                        <input type="text" class="form-control" id="subject" required placeholder="Asunto...">
                     </div>
-                </div>
-                <div class="text-end">
-                    <p>&copy; 2021 Santa Berta | All Right Reserved</p>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Telefono <span>*</span></label>
+                        <input type="tel" class="form-control" id="telefono" required placeholder="Telefono...">
+                    </div>
+                    <div class="mb-3">
+                        <label for="mail" class="form-label">Email <span>*</span></label>
+                        <input type="tel" class="form-control" id="mail" required placeholder="nombre@correo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="textarea" class="form-label">Mensaje <span>*</span></label>
+                        <textarea class="form-control" id="textarea" required placeholder="Quiero consultar por..."></textarea>
+                    </div>
+
+                    <div class="mb-3 d-flex justify-content-center align-items-lg-center">
+                        <button type="submit" class="btn btn-outline-warning btn-submit shadow ">Enviar</button>
+                    </div>
+                </form>
+
+                <div class="mt-5">
+                    <div id="contact-tel" class="container m-auto text-center border-main mb-3">
+                        <p class="text"><span>santabertacontacto@gmail.com.ar</span> <br class="d-inline d-sm-none"> <span class="d-none d-sm-inline">|</span> Tel: 999-9999-9999</p>
+                    </div>
+                    <div class="container w-25 mx-auto mb-5">
+                        <ul class="d-flex justify-content-around p-0">
+                            <li><a href="#" class="btn btn-social"><em class="fab fa-instagram"></em></a></li>
+                            <li><a href="#" class="btn btn-social"><em class="fab fa-facebook-f"></em></a></li>
+                            <li><a href="#" class="btn btn-social"><em class="fab fa-twitter"></em></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
 
+    <footer id="footer" class="mt-3 mb-0">
+        <div class="container pt-3 pb-2">
+            <div class="d-flex justify-content-between ">
+                <div class="w-25">
+                    <p>Beber con moderación.</p>
+                    <p> Prohibida su venta a menores de 18 años.</p>
+                </div>
+                <div class="w-75">
+                    <p class="text-end">Al navegar en este sitio te comprometés a no compartir el contenido con menores de 18 años.</p>
+                </div>
+            </div>
+            <div class="text-end">
+                <p>&copy; 2021 Santa Berta | All Right Reserved</p>
+            </div>
+        </div>
     </footer>
 
 

@@ -432,3 +432,9 @@ img {
     width: 100%;
     height: auto;
 }
+
+ul>li,
+ul>li::marker {
+    text-decoration: none;
+    color: transparent;
+}

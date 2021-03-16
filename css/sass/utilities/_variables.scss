@@ -31,10 +31,21 @@ $color-secondary: #0d0b12;
 $bg-white: #fff;
 $bg-dark:#212529;
 $bg-products-info:#191828;
-$bg-products:("bg-blue":#41a4d2, "bg-crimson":#993128, "bg-blonde":#995528, "bg-coffee":#1c0e06);
+$bg-products:("bg-blue":#008fd1, "bg-crimson":#993128, "bg-blonde":#995528, "bg-coffee": #412626);
 //TODO:Deprecated
 $bg-image-products:( "bg-blue":"../img/celeste.jpg", "bg-crimson":"../img/scotch.png", "bg-blonde":"../img/productov2.jpg", "bg-coffee":"../img/black.jpg");
 
 /*Borders color*/
 
-$border-product: inset 3px #bab28f;
+$border-product: inset 3px $color-primary;
+
+/*shadow*/
+
+$shadow-inset: inset 0px 0px 7px 1px darken($color-primary, 50%);
+
+/*Textures*/
+
+//$bg-texture: "https://www.transparenttextures.com/patterns/candyhole.png";
+$bg-texture: "https://www.transparenttextures.com/patterns/cardboard.png";
+//$bg-texture:"../../img/woods.png"
+$bg-color-texture: bg-main;

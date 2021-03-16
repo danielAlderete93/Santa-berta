@@ -2,6 +2,9 @@
 @include define-product("bg-crimson")
 @include define-product("bg-blonde")
 @include define-product("bg-coffee")
+
+/*Productos*/
+
 .product-description
     flex-basis: 100%
     padding: 1rem
@@ -27,19 +30,12 @@
     @include tablet
         content: ''
 
-.product-info
-    border-radius: 1rem
-    padding: 1rem
-    background: transparentize($bg-products-info, 0.57)
-    border: $border-product
-    @include tablet
-        width: 75%
-        margin: auto
-    .text
-        margin: 0
-        color: $color-primary!important
-        
+/*Ingredients*/
+#pills-ingredents
+    .card
+        max-width: inherit
+        @include tablet
+            max-width: calc(50% - 4rem)
 
-
-
-      
+        @include desktop
+            max-width: calc(20% - 2rem)

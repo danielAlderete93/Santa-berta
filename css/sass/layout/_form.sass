@@ -1,0 +1,45 @@
+$color-label: #873449
+$bg-image: "../../img/beer-footer.jpg"
+
+form
+    width: 100%!important
+    border-radius: 2rem
+    padding: 2rem
+    background: #00000019
+    @include tablet
+        width: 75%!important
+        background: #00000054
+    @include desktop
+        width: 50%!important
+
+.form-control
+    background-color: transparentize($bg-white,0.25)
+
+.form-label
+    color: saturate($color-primary, 25%)
+    font-weight: bold
+    @include text-shadow
+
+.form-label span
+    color: saturate($color-label,25%)
+
+.border-main
+    border-radius: 1rem
+    padding: 1rem
+    background: #191828bd
+    border: 2px solid #bab28f
+    @include desktop
+        width: 50%!important
+
+#contact-tel .text
+    color: saturate($color-primary,10% ) 
+    font-weight: bold
+    margin: 0
+    & span
+        color: saturate($color-primary,10% ) 
+
+@include tablet
+    #contacto .bg-contact
+        @include hero
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($bg-image)
+        background-position: 50%
