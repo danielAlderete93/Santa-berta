@@ -780,14 +780,13 @@ form {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../../img/beer-footer.jpg");
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../img/beer-footer.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/beer-footer.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/beer-footer.jpg");
     background-position: 50%;
   }
 }
 
 #footer {
-  background: #00000054;
   color: #fff;
 }
 
