@@ -14,12 +14,15 @@ $size-line: 100px
 hr
     opacity: 0.8
     width: 80vw
+    //border: 4px double #000000
     border-top: 4px double #000000
+    border-left: 4px double #000000
     text-align: center
     margin-bottom: 3rem
+    border-radius: 1000%
 
 hr:after
-    content: '||🍻||'
+    content: '🍻'
     display: inline-block
     position: relative
     top: -15px
@@ -27,11 +30,20 @@ hr:after
     background: #fff url(https://www.transparenttextures.com/patterns/cardboard.png)
     color: #000000
     font-size: 18px
+    border: 4px #000000 double
+    //border-left: 4px #000000 double
+    //border-right: 4px #000000 double
+    border-radius: 50%
+    @include box-shadow
 
 .simple
     width: 75%
     display: none
     @include tablet
         display: inline-block
-.simple:after
-    content: '🍺'
+    &:after
+        content: '🍺'
+        border: none
+        display: none
+        @include tablet
+            display: inline-block

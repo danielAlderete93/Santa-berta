@@ -93,9 +93,9 @@
         </div>
 
         <!--Producto1-->
-        <div class="mb-5 sticky-lg-top">
+        <div class="sticky-lg-top ">
             <div class="d-flex flex-lg-nowrap flex-wrap shadow bg-blue" tabindex="0">
-                <figure class="product-image m-0">
+                <figure class="product-image m-auto">
                     <img src="img/celeste.jpg" alt="producto1 ">
                 </figure>
                 <div class="product-description py-3 py-lg-5 ">
@@ -120,9 +120,9 @@
         <!--Producto1-->
 
         <!--Producto2-->
-        <div class="mb-5 sticky-lg-top">
+        <div class="sticky-lg-top">
             <div class="d-flex flex-lg-nowrap flex-wrap flex-row-reverse shadow bg-crimson" tabindex="0">
-                <figure class="product-image m-0">
+                <figure class="product-image m-auto">
                     <img src="img/scotch.png " alt="producto2">
                 </figure>
                 <div class="product-description py-3 py-lg-5 ">
@@ -147,9 +147,9 @@
         <!--Producto2-->
 
         <!--Producto3-->
-        <div class="mb-5 sticky-lg-top">
+        <div class="sticky-lg-top">
             <div class="d-flex flex-lg-nowrap flex-wrap shadow bg-blonde" tabindex="0">
-                <figure class="product-image m-0">
+                <figure class="product-image m-auto">
                     <img src="img/productov2.jpg  " alt="producto3">
                 </figure>
                 <div class="product-description py-3 py-lg-5 ">
@@ -174,9 +174,9 @@
         <!--Producto3-->
 
         <!--Producto4-->
-        <div class="mb-5 sticky-lg-top">
+        <div class="sticky-lg-top">
             <div class="d-flex flex-lg-nowrap flex-wrap flex-row-reverse shadow bg-coffee" tabindex="0">
-                <figure class="product-image m-0">
+                <figure class="product-image m-auto">
                     <img src="img/black.jpg " alt="producto4">
                 </figure>
                 <div class="product-description py-3 py-lg-5 ">
@@ -262,7 +262,6 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="mx-auto d-sm-none">
                     <!--second card-->
                     <div class="col-md-4 image">
                         <img src="./img/Cebada.jpg" alt="Cebada">
@@ -332,7 +331,6 @@
                     <!--Ingredientes-->
 
                 </ul>
-
                 <div id="tabs" class="tab-content " id="pills-tabContent">
                     <!--Malteado-->
                     <div class="tab-pane px-md-5 py-md-1 fade show active" id="pills-step-1" role="tabpanel" aria-labelledby="pills-step-1-tab">
@@ -489,7 +487,7 @@
 
     </section>
 
-    <section id="brewmaster" class="section section-secondary pb-3" tabindex="0">
+    <section id="brewmaster" class="section pb-3" tabindex="0">
         <div class="title-container">
             <div>
                 <h2 class="title">Sobre<br><span>Brewmaster</span></h2>
@@ -518,25 +516,25 @@
         <hr class="mx-auto">
     </section>
 
-
-
-    <section id="contacto" class="section section-primary" tabindex="0">
+    <section id="contacto" class="section" tabindex="0">
         <div class="title-container">
             <div>
                 <h2 class="title">Contac<span>tanos</span></h2>
                 <div class="line-3 shadow"></div>
             </div>
         </div>
-        <div class="bg-contact  py-md-5">
-            <div class="contact-container container">
-                <form action="" class="container m-auto">
-                    <div class="mb-3">
-                        <label for="nombre" class="form-label">Nombre <span>*</span></label>
-                        <input type="text" class="form-control" id="nombre" required placeholder="Nombre...">
-                    </div>
-                    <div class="mb-3">
-                        <label for="subject" class="form-label">Asunto <span>*</span></label>
-                        <input type="text" class="form-control" id="subject" required placeholder="Asunto...">
+        <div class="bg-contact contact-container">
+            <div class="w-100">
+                <form action="" class="m-auto my-3">
+                    <div class="d-flex justify-content-between flex-column flex-lg-row mb-3">
+                        <div class="me-1 flex-grow-1">
+                            <label for="nombre" class="form-label">Nombre <span>*</span></label>
+                            <input type="text" class="form-control" id="nombre" required placeholder="Nombre...">
+                        </div>
+                        <div class="ms-1 flex-grow-1">
+                            <label for="Apellido" class="form-label">Apellido <span>*</span></label>
+                            <input type="text" class="form-control" id="apellido" required placeholder="Apellido...">
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="telefono" class="form-label">Telefono <span>*</span></label>
@@ -546,10 +544,17 @@
                         <label for="mail" class="form-label">Email <span>*</span></label>
                         <input type="tel" class="form-control" id="mail" required placeholder="nombre@correo.com">
                     </div>
+
+                    <div class="mb-3">
+                        <label for="subject" class="form-label">Asunto <span>*</span></label>
+                        <input type="text" class="form-control" id="subject" required placeholder="Asunto...">
+                    </div>
+
                     <div class="mb-3">
                         <label for="textarea" class="form-label">Mensaje <span>*</span></label>
                         <textarea class="form-control" id="textarea" required placeholder="Quiero consultar por..."></textarea>
                     </div>
+
 
                     <div class="mb-3 d-flex justify-content-center align-items-lg-center">
                         <button type="submit" class="btn btn-outline-warning btn-submit shadow ">Enviar</button>

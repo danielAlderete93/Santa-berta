@@ -438,3 +438,8 @@ ul>li::marker {
     text-decoration: none;
     color: transparent;
 }
+
+textarea {
+    resize: none;
+    height: 8rem;
+}

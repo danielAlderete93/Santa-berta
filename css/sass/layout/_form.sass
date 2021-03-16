@@ -1,11 +1,17 @@
+$bg-color-form: #222222ce
 $color-label: #873449
 $bg-image: "../img/beer-footer.jpg"
+
+.contact-container
+    display: flex
+    justify-content: center
+    align-items: center
 
 form
     width: 100%!important
     border-radius: 2rem
     padding: 2rem
-    background: #000000ab
+    background: $bg-color-form
     @include tablet
         width: 75%!important
     @include desktop
@@ -31,14 +37,14 @@ form
         width: 50%!important
 
 #contact-tel .text
-    color: saturate($color-primary,10% ) 
+    color: saturate($color-primary,10% )
     font-weight: bold
     margin: 0
     & span
-        color: saturate($color-primary,10% ) 
+        color: saturate($color-primary,10% )
 
 @include tablet
     #contacto .bg-contact
         @include hero
         background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($bg-image)
-        background-position: 50%
+        background-position: center 60% !important

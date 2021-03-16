@@ -1,0 +1,131 @@
+/*Breakpoints*/
+
+@mixin mobile-xl
+    @media only screen and (min-width: $breakpoint-sm)
+        @content
+
+@mixin tablet
+    @media only screen and (min-width: $breakpoint-md)
+        @content
+
+@mixin desktop
+    @media only screen and (min-width: $breakpoint-lg)
+        @content
+
+@mixin large
+    @media only screen and (min-width: $breakpoint-xl)
+        @content
+
+/*Layout*/
+
+@mixin self-center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+@mixin skirt($stroke-color, $color)
+    -webkit-text-stroke: 1px $stroke-color
+    color: $color !important
+
+/*Components*/
+
+@mixin hero
+    filter: grayscale(0.35)
+    min-height: 100vh
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    width: 100%
+
+/*Sombreado*/
+
+@mixin define-product($bg-color-name)
+    $transparent: 0
+    $bg: map-get($bg-products, $bg-color-name)
+    $texture: "../img/woods.png"
+    $font-size: 2.8rem
+    @include tablet
+        $font-size: 2.5rem
+
+    .#{$bg-color-name}
+        background-color: transparentize(darken($bg, 15%), $transparent)
+        min-height: 100vh
+        margin-bottom: 3rem
+        @include desktop
+            @include image-overlay(darken($bg, 25%), $texture)
+            margin-bottom: 0rem
+            padding: 1rem
+        .product-image
+            @include image-overlay(darken($bg, 35%), "")
+            padding: 0
+
+        @include desktop
+            .product-image
+                max-width: 50%
+            .product-image img
+                border: .5rem solid
+                border-color: lighten($bg,0%) lighten($bg,5%) lighten($bg,20%) lighten($bg,15%)
+                border-radius: 1.5%
+                @include box-shadow-blur
+                margin: auto
+                
+
+        .product-description
+            .title
+                @include skirt($bg, darken($bg, 15%))
+                @include text-shadow
+                letter-spacing: 3px
+                font-size: $font-size
+            .subtitle
+                font-size: $font-size * 0.7
+                @include text-shadow
+                @include skirt(lighten($bg, 7.5%), $color-grey)
+            @include desktop
+                align-self: center
+
+        .product-info
+            border-radius: 1rem
+            padding: 1rem
+            background: transparentize($bg-products-info, 0.57)
+            @include inset-border($bg)
+            @include inset-box-shadow($bg)
+            @include tablet
+                width: 75%
+                margin: auto
+
+            .text
+                @include text-shadow
+                @include skirt($bg, #dcd6d6)
+                margin: 0
+
+@mixin image-overlay($bg-color, $url-image)
+    flex-basis: 100%
+    padding: 0
+    display: block
+    background-color: black
+    background-color: $bg-color
+    background-image: url($url-image)
+    @include tablet
+        background-position: center
+        background-blend-mode: overlay
+
+/*shadow*/
+
+@mixin text-shadow
+    text-shadow: 2px 2px 2px black
+
+    &-dark
+        text-shadow: 5px 5px 3px #fff
+
+@mixin inset-border($color)
+    border: inset 2px $color
+
+@mixin box-shadow
+    box-shadow: 2px 2px 2px black !important
+
+@mixin inset-box-shadow($color)
+    box-shadow: inset 0px 0px 7px 1px black//darken($color-primary, 50%)
+
+@mixin box-shadow-blur
+    box-shadow: 0px 0px 50px black

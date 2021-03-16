@@ -15,20 +15,19 @@
         @include desktop
             text-align: left
     .title
-        //@include skirt($color-white,transparent)
         color: $color-white!important
-    //.subtitle,
+
     .text
         color: $color-grey!important
+    @include desktop
+    .header .text
+        margin: 1rem
 
 .product-description .subtitle:before
     content: '-'
-    @include tablet
-        content: ''
+
 .product-description .subtitle:after
     content: '-'
-    @include tablet
-        content: ''
 
 /*Ingredients*/
 #pills-ingredents
