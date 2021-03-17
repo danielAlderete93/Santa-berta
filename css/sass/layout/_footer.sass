@@ -1,4 +1,45 @@
+$hero-main: "../img/vasos.jpg"
+
+#footer p,#footer a
+    font-size: .8rem
+    font-weight: bold
+    @include desktop
+        font-size: initial
+
+#footer a
+    text-decoration: underline
+    color: #888
+    transition: 1s ease all
+    &:hover
+        color: #873449
+        transition: 1s ease all
+
+#footer h5
+    font-size: 1rem
+    font-weight: bold
+    color: $color-grey
+
 #footer
     color: $color-white
-    background-color: #2626269a
-    min-height: 100vh
+    background-color: darken(#191828,10%)
+    margin: 0
+    font-weight: bold
+    padding: 0
+
+#footer
+    .warning
+        padding: 4px 0
+        text-decoration: underline
+        background: invert($color-primary)
+        color: $color-primary
+
+#footer
+    ul
+        padding: 0
+    li
+        margin-top: 1rem
+
+.warning-sold
+    width: 100%
+    @include tablet
+        width: auto
