@@ -1,5 +1,6 @@
 $hero-main: "../img/vasos.jpg"
-
+$bg-color-warning: #704663
+$color-warning: #EFE7C5
 #footer p,#footer a
     font-size: .8rem
     font-weight: bold
@@ -14,7 +15,7 @@ $hero-main: "../img/vasos.jpg"
         color: #873449
         transition: 1s ease all
 
-#footer h5
+#footer h2
     font-size: 1rem
     font-weight: bold
     color: $color-grey
@@ -30,16 +31,33 @@ $hero-main: "../img/vasos.jpg"
     .warning
         padding: 4px 0
         text-decoration: underline
-        background: invert($color-primary)
-        color: $color-primary
+        background: $bg-color-warning
+        color: $color-warning
 
 #footer
     ul
         padding: 0
-    li
-        margin-top: 1rem
 
 .warning-sold
     width: 100%
     @include tablet
         width: auto
+
+.rounded-icon
+    border-radius: 100%
+    height: 2rem
+    width: 2rem
+    text-align: center
+    line-height: 2rem
+
+#footer .social.rounded-icon
+    border: 1px solid $color-primary
+    transition: 1s all ease
+    &a
+        color: $color-primary
+    &:hover
+        background-color: $color-primary
+        transition: 1s all ease
+        a
+            color: black
+        

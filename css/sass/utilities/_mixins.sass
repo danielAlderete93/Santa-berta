@@ -52,8 +52,8 @@
         background-color: transparentize(darken($bg, 15%), $transparent)
         min-height: 100vh
         margin-bottom: 3rem
+        @include image-overlay(darken($bg, 25%), $texture)
         @include desktop
-            @include image-overlay(darken($bg, 25%), $texture)
             margin-bottom: 0rem
             padding: 1rem
         .product-image
@@ -69,7 +69,6 @@
                 border-radius: 1.5%
                 @include box-shadow-blur
                 margin: auto
-                
 
         .product-description
             .title
@@ -106,9 +105,10 @@
     background-color: black
     background-color: $bg-color
     background-image: url($url-image)
-    @include tablet
-        background-position: center
-        background-blend-mode: overlay
+    background-position: center
+    //background-blend-mode: overlay
+    background-blend-mode: color-burn
+    
 
 /*shadow*/
 
