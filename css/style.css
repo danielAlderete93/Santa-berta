@@ -408,7 +408,7 @@ label,
 .product-info .text,
 .btn,
 #footer a {
-  font-family: "Akaya Kanadaka", cursive;
+  font-family: "Akaya Telivigala", cursive;
 }
 
 q {
@@ -911,10 +911,10 @@ form {
 @import 'layout/forms';
 */
 .btn-product, .btn-submit {
-  padding: 1.375rem 3rem !important;
+  padding: 0.9rem 3rem !important;
   border-radius: 3rem;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   -webkit-box-shadow: 2px 2px 2px black !important;
           box-shadow: 2px 2px 2px black !important;
