@@ -1,19 +1,23 @@
-/*Variable*/
+// sass-lint:disable indentation
+//Variable
+$url-bg-image2: '../../img/logo.jpg'
 $color-item: #873449
 $color-inactive: #41404f
 $bg-tabs: #191828
 
-/*Mixin*/
+//Mixin
 @mixin border-pills($color)
     border-bottom: 2px solid $color
 
 /*Magic*/
 #tabs-nav
+    display: none
     background-color: $bg-tabs
+    opacity: 0.8
 
 #tabs .tab-pane
     min-height: 50vh
-    border-top: 1px inset $color-item;
+    border-top: 1px inset $color-item
 
 #tabs-nav .nav-pills .nav-link
     color: $color-grey
@@ -39,7 +43,7 @@ $bg-tabs: #191828
         @include tablet
             margin: 2rem 0
             text-align: left
-            
+
     .title
         color: $color-grey
         font-weight: bold

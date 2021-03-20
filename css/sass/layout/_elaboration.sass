@@ -1,0 +1,47 @@
+// sass-lint:disable indentation
+$url-bg-image-beers: '../../img/test.jpg'
+$url-bg-image-afiche: '../../img/logo.jpg'
+$color-bg-dark: #0d0d0b
+$color-text: #ddd
+
+.elaboracion
+    @include self-center
+    @include bg-image-cover-center($url-bg-image-beers)
+    background-blend-mode: soft-light
+    background-color: $color-bg-dark
+    min-height: 100vh
+    transition: all 1s ease
+    @include tablet
+        min-height: 60vh
+    @include desktop
+        min-height: 70vh
+        background-color: transparent
+        background-blend-mode: normal
+
+    & .title-container,
+    & .container,
+    & .text-center
+        @include desktop
+            display: hidden
+            opacity: 0
+            transition: opacity 1s ease, display .1s ease
+
+    &.show
+        background-color: $color-bg-dark
+        background-blend-mode: soft-light
+        transition: all 1s ease
+
+        & .title-container,
+        & .container,
+        & .text-center
+            display: block !important
+            opacity: 1 !important
+        & .title-container
+            transition: opacity .1s ease, display .1s ease
+        & .container
+            transition: opacity 2s ease, display .1s ease
+        & .text-center
+            transition: opacity 3s ease, display .1s ease
+
+    & .text
+        color: $color-text

@@ -12,6 +12,7 @@
 /*Components*/
 /*Sombreado*/
 /*shadow*/
+/*Backgrounds image*/
 /*
 @import 'utilities/bootstrap';
 @import 'vendors/jquery-ui';
@@ -393,6 +394,7 @@ h3,
 h5,
 h6,
 a,
+.title-accordion h2,
 .text-product p span {
   font-family: "Special Elite", cursive;
   font-display: swap;
@@ -408,11 +410,11 @@ label,
 .product-info .text,
 .btn,
 #footer a {
-  font-family: "Akaya Telivigala", cursive;
+  font-family: "PT Sans", cursive;
 }
 
 q {
-  font-family: "Akaya Kanadaka", cursive;
+  font-family: "PT Sans", cursive;
   letter-spacing: 1.9px;
 }
 
@@ -671,19 +673,15 @@ a {
 }
 
 .bg-main {
-  /*background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url(https://www.transparenttextures.com/patterns/broken-noise.png);*/
-  min-height: 100vh;
+  background-attachment: fixed;
   background-color: #1e1c12;
   background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
-  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .section {
-  margin-top: calc(100vh - 2rem);
-  min-height: 80vh;
   margin: 5rem 0;
-  -webkit-box-shadow: 2px 2px 2px black !important;
-          box-shadow: 2px 2px 2px black !important;
+  min-height: 80vh;
 }
 
 .section .title-container {
@@ -703,10 +701,21 @@ a {
   padding: 2.5rem 0;
 }
 
-#nosotros.section,
-#brewmaster.section {
+.nosotros,
+.brewmaster {
+  -webkit-box-shadow: 2px 2px 2px black !important;
+          box-shadow: 2px 2px 2px black !important;
+}
+
+.nosotros,
+.brewmaster {
   background-color: #fff;
   background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+}
+
+.elaboracion {
+  background-blend-mode: overlay;
+  background-size: cover;
 }
 
 #nosotros .image {
@@ -728,6 +737,87 @@ a {
 
 #nosotros .title {
   font-weight: 900;
+}
+
+.elaboracion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../../img/test.jpg") center center no-repeat;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-color: #0d0d0b;
+  min-height: 100vh;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+@media only screen and (min-width: 768px) {
+  .elaboracion {
+    min-height: 60vh;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .elaboracion {
+    min-height: 70vh;
+    background-color: transparent;
+    background-blend-mode: normal;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .elaboracion .title-container,
+  .elaboracion .container,
+  .elaboracion .text-center {
+    display: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 1s ease, display .1s ease;
+    transition: opacity 1s ease, display .1s ease;
+  }
+}
+
+.elaboracion.show {
+  background-color: #0d0d0b;
+  background-blend-mode: soft-light;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.elaboracion.show .title-container,
+.elaboracion.show .container,
+.elaboracion.show .text-center {
+  display: block !important;
+  opacity: 1 !important;
+}
+
+.elaboracion.show .title-container {
+  -webkit-transition: opacity .1s ease, display .1s ease;
+  transition: opacity .1s ease, display .1s ease;
+}
+
+.elaboracion.show .container {
+  -webkit-transition: opacity 2s ease, display .1s ease;
+  transition: opacity 2s ease, display .1s ease;
+}
+
+.elaboracion.show .text-center {
+  -webkit-transition: opacity 3s ease, display .1s ease;
+  transition: opacity 3s ease, display .1s ease;
+}
+
+.elaboracion .text {
+  color: #ddd;
 }
 
 .contact-container {
@@ -910,7 +1000,47 @@ form {
 @import 'layout/footer';
 @import 'layout/forms';
 */
-.btn-product, .btn-submit {
+#accordion-service, #accordion-elaboracion, #accordion-ingredients {
+  padding-right: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+#accordion-service {
+  background-color: #008fd1;
+}
+
+#accordion-elaboracion {
+  background-color: #343a40;
+}
+
+#accordion-ingredients {
+  background-color: #198754;
+}
+
+.accordion-item {
+  background-color: white;
+}
+
+.accordion-button {
+  font-size: 1.2rem;
+}
+
+.accordion-body {
+  padding: 1rem 2rem;
+  background-color: white;
+  font-size: 1rem;
+  line-height: 175%;
+}
+
+.title-accordion h2 {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn-product, .btn-submit, .btn-craft {
   padding: 0.9rem 3rem !important;
   border-radius: 3rem;
   font-weight: bold;
@@ -984,6 +1114,17 @@ form {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   -webkit-transition: all .3s ease-out;
   transition: all .3s ease-out;
+}
+
+.btn-craft {
+  background-color: transparent;
+  border: 2px solid #ffc107;
+  color: #ffc107;
+}
+
+.btn-craft:hover {
+  background-color: #ffc10720;
+  color: #ffc107;
 }
 
 .bg-blue {
@@ -1814,7 +1955,7 @@ hr:after {
 }
 
 .simple:after {
-  content: '🍺';
+  content: '  🍺';
   border: none;
   display: none;
 }
@@ -1825,11 +1966,11 @@ hr:after {
   }
 }
 
-/*Variable*/
-/*Mixin*/
 /*Magic*/
 #tabs-nav {
+  display: none;
   background-color: #191828;
+  opacity: 0.8;
 }
 
 #tabs .tab-pane {
